@@ -1,0 +1,14 @@
+services:
+  report-agent:
+    build: .
+
+    env_file:
+      - .env
+
+    stdin_open: true
+
+    tty: true
+
+    volumes:
+      - ./reports:/app/reports
+      - ./logs:/app/logs
